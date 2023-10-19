@@ -1,6 +1,7 @@
 import usePlayer from "../../hook/usePlayer"
 import MainFrame from "../MainFrame/MainFrame";
 import MineralsConteiner from "../MineralsConteiner/MineralsConteiner";
+import RightNav from "../RightNav/RightNav";
 import "./layout.css"
 
 const Layout = () => {
@@ -10,6 +11,7 @@ const Layout = () => {
         <div className="mainLayout">
             <MineralsConteiner></MineralsConteiner>
             <MainFrame></MainFrame>
+            <RightNav></RightNav>
         </div>
     )
 }

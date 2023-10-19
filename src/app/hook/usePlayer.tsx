@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import Mineral from "../shared/config/mineralInterface";
-import {setName, setMinerals} from "./../shared/config/currentSlice"
+import {setName, setMinerals, setHelpBox} from "./../shared/config/currentSlice"
 
 const usePlayer = () => {
 
     const dispatch = useDispatch();
 
 
-    const { name, minerals } = (useSelector((state) => state) as any).currency;
+    const { name, minerals, helpBox } = (useSelector((state) => state) as any).currency;
 
     const setCurrentName = (newName: string) => {
         dispatch(setName(newName));
@@ -36,8 +36,12 @@ const usePlayer = () => {
 
     }
 
+    const setCurrentHelpBox = (v: string) => {
+        dispatch(setHelpBox(v))
+    }
+
     return ({
-        name, minerals, setCurrentName, getCurrentMineral
+        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox
     })
 }
 
