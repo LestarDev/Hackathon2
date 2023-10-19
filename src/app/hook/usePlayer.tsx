@@ -86,11 +86,11 @@ const usePlayer = () => {
     }
 
     const addBoost = (n: number) => {
-        dispatch(setBoost(boost+n))
+        dispatch(setBoost(n))
     }
 
     return ({
-        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral, setCurrentOpenShop, isShopOpen, produceSteel,getNrFromName, haveEnoughToBoyItem, addBoost
+        name, minerals, helpBox, boost, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral, setCurrentOpenShop, isShopOpen, produceSteel,getNrFromName, haveEnoughToBoyItem, addBoost
 
     })
 }
