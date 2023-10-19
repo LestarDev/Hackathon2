@@ -1,4 +1,5 @@
 import { Item } from "../../config/mineralInterface";
+import img from './../../../../assets/items/wood0000.png'
 
 const drewnianyAmulet: Item = {
     nazwa: 'Drewniany amulet',
@@ -8,7 +9,7 @@ const drewnianyAmulet: Item = {
             cena: 200
         }
     ],
-    boost: 2
+    boost: 10
 }
 
 export default drewnianyAmulet

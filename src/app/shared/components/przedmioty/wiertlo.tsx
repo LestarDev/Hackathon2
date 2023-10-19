@@ -1,22 +1,24 @@
 import { Item } from "../../config/mineralInterface";
+import img from './../../../../assets/items/drill0000.png'
 
 const wiertlo: Item = {
     nazwa: 'Wiertło',
     potrzebneSurowce: [
         {
             typMineralu: 'Żelazo',
-            cena: 5000
+            cena: 10
         },
         {
             typMineralu: 'Srebro',
-            cena: 1500,
+            cena: 10,
         },
         {
             typMineralu: 'Stal',
-            cena: 400
+            cena: 10
         }
     ],
-    boost: 100,
+    boost: 50,
+    img
 }
 
 export default wiertlo;

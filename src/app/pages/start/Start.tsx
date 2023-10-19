@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "./Start.css";
-import mapa from "./../../../assets/mapa.webp";
+import mapa from "./../../../assets/lil_isle0000.png";
 import machineStart from "./../../../assets/machineStart.mp3";
 import machineContinue from "./../../../assets/machineContinue.mp3";
 import melody1 from "./../../../assets/melody1.mp3";

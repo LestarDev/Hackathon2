@@ -1,0 +1,11 @@
+.shopClosed{
+    display: none;
+}
+
+.shop {
+    width: 14%;
+    z-index: 500;
+    position: absolute;
+    right: 0;
+    top: 40px;
+}

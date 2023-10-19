@@ -1,0 +1,18 @@
+.shopItem {
+    font-size: 0.6rem;
+    margin-top: 20px;
+}
+
+.shopItemImgWrapper {
+    display: block;
+    width: 40px;
+}
+
+.shopItemImgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.shopItemImg{
+    width: 100%;
+}

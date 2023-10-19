@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import Mineral from "../shared/config/mineralInterface";
-import {setName, setMinerals, setHelpBox} from "./../shared/config/currentSlice"
+import Mineral, { Item, mineralName } from "../shared/config/mineralInterface";
+import {setName, setMinerals, setHelpBox, setOpenShop, setBoost} from "./../shared/config/currentSlice"
 
 const usePlayer = () => {
 
@@ -8,7 +8,7 @@ const usePlayer = () => {
 
     
     
-    const { name, minerals, helpBox } = (useSelector((state) => state) as any).currency;
+    const { name, minerals, helpBox, isShopOpen, boost } = (useSelector((state) => state) as any).currency;
     
     const setCurrentName = (newName: string) => {
         dispatch(setName(newName));
@@ -16,6 +16,10 @@ const usePlayer = () => {
     
     const getCurrentMineral: Mineral = (nr: number) => {
         return minerals[nr] as Mineral
+    }
+
+    const setCurrentOpenShop = (v: boolean) =>{
+        dispatch(setOpenShop(v));
     }
     
     const addMineral = (nr: number, howMuch: number) => {
@@ -28,7 +32,8 @@ const usePlayer = () => {
                     opis: getCurrentMineral(i).opis,
                     img: getCurrentMineral(i).img,
                     wartosc: getCurrentMineral(i).wartosc+howMuch,
-                    rudaImg: getCurrentMineral(i).rudaImg
+                    rudaImg: getCurrentMineral(i).rudaImg,
+                    bgImg: getCurrentMineral(i).bgImg
                 }
                 cloneMinerals.push(modifitetedMaterial);
             }else{
@@ -40,7 +45,30 @@ const usePlayer = () => {
     }
     const produceSteel = () => {
         if(minerals[0] > 0 && minerals[1] > 0){
+            addMineral(0, -1);
+            addMineral(1, -1);
+            addMineral(4, 1);
+        }
+    }
 
+    const getNrFromName = (n: mineralName) => {
+        switch(n){
+            case "Żelazo":
+                return 0;
+            case "Węgiel":
+                return 1;
+            case "Miedź":
+                return 2;
+            case "Srebro":
+                return 3;
+            case "Stal":
+                return 4;
+            case "Drewno":
+                return 5;
+            case "Złom":
+                return 6;
+            default:
+                return 0;
         }
     }
     
@@ -48,8 +76,23 @@ const usePlayer = () => {
         dispatch(setHelpBox(v))
     }
 
+    const haveEnoughToBoyItem = (item: Item) => {
+        let haveEnough = true;
+        item.potrzebneSurowce.forEach(sur=>{
+            if(sur.cena>getCurrentMineral(getNrFromName(sur.typMineralu)).wartosc){
+                haveEnough=false;
+            }
+        })
+        return haveEnough;
+    }
+
+    const addBoost = (n: number) => {
+        dispatch(setBoost(boost+n))
+    }
+
     return ({
-        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral
+        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral, setCurrentOpenShop, isShopOpen, produceSteel, haveEnoughToBoyItem, addBoost
+
     })
 }
 

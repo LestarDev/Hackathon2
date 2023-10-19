@@ -1,14 +1,32 @@
+.rightNav {
+    width: 30%;
+    font-size: 0.8rem;
+}
+
+.shopButton {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .rightNav{
     width: 20%;
 
-}
-
-.rightNav img{
-    width: 100%;
 }
 
 .helpBox{
     position: absolute;
     width: 25vw;
     transform: translateX(-45%);
+}
+
+.helpBox img{
+    width: 100%;
+}
+
+.rotation-left{
+    width: 80vw;
+    font-size: 70%;
+    transform: translateX(-85%);
 }

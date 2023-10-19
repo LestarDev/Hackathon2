@@ -1,6 +1,7 @@
 import Mineral from "../../config/mineralInterface";
 import rudaImg from "../../../../assets/rock_iron.png"
 import ironPNG from "./../../../../assets/iron.png";
+import bgImg from "../../../../assets/items/cave20000.png"
 
 const iron: Mineral = {
     nazwa: "Żelazo",
@@ -8,6 +9,7 @@ const iron: Mineral = {
     img: ironPNG,
     wartosc: 0,
     rudaImg,
+    bgImg
 }
 
 export default iron;
