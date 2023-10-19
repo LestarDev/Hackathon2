@@ -9,7 +9,7 @@ const drewnianyAmulet: Item = {
             cena: 200
         }
     ],
-    boost: 2
+    boost: 10
 }
 
 export default drewnianyAmulet

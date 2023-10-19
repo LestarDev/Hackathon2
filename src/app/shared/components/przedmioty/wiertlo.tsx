@@ -17,7 +17,7 @@ const wiertlo: Item = {
             cena: 400
         }
     ],
-    boost: 100,
+    boost: 50,
     img
 }
 
