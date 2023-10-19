@@ -8,4 +8,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+.rightNav{
+    width: 20%;
+
+}
+
+.helpBox{
+    position: absolute;
+    width: 25vw;
+    transform: translateX(-45%);
 }
