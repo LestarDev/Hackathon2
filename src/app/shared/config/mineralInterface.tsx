@@ -1,4 +1,4 @@
-type mineralName = "Żelazo" | "Srebro" | "Złoto" | "Miedź" | "Więgiel" | "Drewno" | "Stal";
+type mineralName = "Żelazo" | "Srebro" | "Złom" | "Miedź" | "Więgiel" | "Drewno" | "Stal";
 
 interface Mineral {
     nazwa: mineralName,
