@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { PayloadAction } from '@reduxjs/toolkit'
 import Mineral from './mineralInterface'
 import iron from '../components/mineraly/iron'
 
@@ -21,11 +21,15 @@ export const currencySlice = createSlice({
 
         setName: (state, action: PayloadAction<string>) => {
             state.name=action.payload;
-        }
+        },
         
+        setMinerals: (state, action: PayloadAction<Mineral[]>) => {
+            state.minerals=action.payload;
+        }
+
     }
 })
 
-export const {setName} = currencySlice.actions
+export const {setName, setMinerals} = currencySlice.actions
 
 export default currencySlice.reducer
