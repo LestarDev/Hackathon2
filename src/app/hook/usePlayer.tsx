@@ -90,7 +90,7 @@ const usePlayer = () => {
     }
 
     return ({
-        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral, setCurrentOpenShop, isShopOpen, produceSteel, haveEnoughToBoyItem, addBoost
+        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral, setCurrentOpenShop, isShopOpen, produceSteel,getNrFromName, haveEnoughToBoyItem, addBoost
 
     })
 }
