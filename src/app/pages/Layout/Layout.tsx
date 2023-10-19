@@ -2,7 +2,7 @@ import usePlayer from "../../hook/usePlayer"
 import MainFrame from "../MainFrame/MainFrame";
 import MineralsConteiner from "../MineralsConteiner/MineralsConteiner";
 import RightNav from "../RightNav/RightNav";
-import "./layout.css"
+import "./Layout.css"
 
 const Layout = () => {
     const player = usePlayer();
