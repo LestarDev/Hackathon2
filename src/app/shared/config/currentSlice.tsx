@@ -13,14 +13,16 @@ interface CounterState{
     name: string,
     minerals: Mineral[],
     helpBox: string,
-    isShopOpen: boolean
+    isShopOpen: boolean,
+    boost: number
 }
 
 const initialState: CounterState = {
     name: "Naukowiec",
     minerals: [iron, coal, copper, silver, steel, wood, zlom],
     helpBox: "img",
-    isShopOpen: false
+    isShopOpen: false,
+    boost: 0
 }
 
 export const currencySlice = createSlice({
@@ -43,11 +45,15 @@ export const currencySlice = createSlice({
 
         setOpenShop: (state, action: PayloadAction<boolean>) =>{
             state.isShopOpen = action.payload;
-        }
+        },
+
+        setBoost: (state, action: PayloadAction<number>) => {
+            state.boost=action.payload;
+        },
 
     }
 })
 
-export const {setName, setMinerals, setHelpBox, setOpenShop} = currencySlice.actions
+export const {setName, setMinerals, setHelpBox, setOpenShop, setBoost} = currencySlice.actions
 
 export default currencySlice.reducer

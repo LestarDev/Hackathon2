@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import Mineral from "../shared/config/mineralInterface";
-import {setName, setMinerals, setHelpBox, setOpenShop} from "./../shared/config/currentSlice"
+import Mineral, { Item, mineralName } from "../shared/config/mineralInterface";
+import {setName, setMinerals, setHelpBox, setOpenShop, setBoost} from "./../shared/config/currentSlice"
 
 const usePlayer = () => {
 
@@ -8,7 +8,7 @@ const usePlayer = () => {
 
     
     
-    const { name, minerals, helpBox, isShopOpen } = (useSelector((state) => state) as any).currency;
+    const { name, minerals, helpBox, isShopOpen, boost } = (useSelector((state) => state) as any).currency;
     
     const setCurrentName = (newName: string) => {
         dispatch(setName(newName));
@@ -49,13 +49,48 @@ const usePlayer = () => {
             addMineral(4, 1);
         }
     }
+
+    const getNrFromName = (n: mineralName) => {
+        switch(n){
+            case "Żelazo":
+                return 0;
+            case "Węgiel":
+                return 1;
+            case "Miedź":
+                return 2;
+            case "Srebro":
+                return 3;
+            case "Stal":
+                return 4;
+            case "Drewno":
+                return 5;
+            case "Złom":
+                return 6;
+            default:
+                return 0;
+        }
+    }
     
     const setCurrentHelpBox = (v: string) => {
         dispatch(setHelpBox(v))
     }
 
+    const haveEnoughToBoyItem = (item: Item) => {
+        let haveEnough = true;
+        item.potrzebneSurowce.forEach(sur=>{
+            if(sur.cena>getCurrentMineral(getNrFromName(sur.typMineralu)).wartosc){
+                haveEnough=false;
+            }
+        })
+        return haveEnough;
+    }
+
+    const addBoost = (n: number) => {
+        dispatch(setBoost(boost+n))
+    }
+
     return ({
-        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral, setCurrentOpenShop, isShopOpen, produceSteel
+        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral, setCurrentOpenShop, isShopOpen, produceSteel, haveEnoughToBoyItem, addBoost
 
     })
 }
