@@ -10,7 +10,8 @@ interface Mineral {
     nazwa: mineralName,
     opis: string,
     img: string,
-    wartosc: number
+    wartosc: number,
+    rudaImg?: string,
 }
 
 interface Item {
