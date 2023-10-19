@@ -6,7 +6,9 @@ const Ruda = ({mineral}: {mineral: Mineral}) => {
     return (
         <div className="ruda">
             <h3>{mineral.nazwa}</h3>
-            <img src={mineral.rudaImg} alt={mineral.nazwa} />
+            <div className="imgWrapper">
+                <img className="rudaImg" src={mineral.rudaImg} alt={mineral.nazwa} />
+            </div>
         </div>
     )
 }

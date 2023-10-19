@@ -8,8 +8,6 @@ import bgImage from './../../../assets/mainBackground.png'
 const MainFrame = () => {
     const player = usePlayer();
 
-    console.log(player.minerals)
-
     const refDiv = useRef<HTMLDivElement>(null);
 
     const addImg = () => {
@@ -26,14 +24,14 @@ const MainFrame = () => {
     return (
         <div className="mainFrame" ref={refDiv} onLoad={addImg}>
             <div className="rudaRow">
+                <Ruda mineral={player.minerals[5]}></Ruda>
                 <Ruda mineral={player.minerals[0]}></Ruda>
                 <Ruda mineral={player.minerals[1]}></Ruda>
-                <Ruda mineral={player.minerals[2]}></Ruda>
             </div>
             <div className="rudaRow">
+                <Ruda mineral={player.minerals[6]}></Ruda>
+                <Ruda mineral={player.minerals[2]}></Ruda>
                 <Ruda mineral={player.minerals[3]}></Ruda>
-                <Ruda mineral={player.minerals[4]}></Ruda>
-                <Ruda mineral={player.minerals[5]}></Ruda>
             </div>
         </div>
     )
