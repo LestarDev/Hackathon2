@@ -1,6 +1,6 @@
 import usePlayer from "../../hook/usePlayer";
 import mapa from "./../../../assets/mapa.png"
-import './RightNav.css'
+import "./RightNav.css";
 
 const RightNav = () => {
 

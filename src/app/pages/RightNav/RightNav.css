@@ -1,4 +1,14 @@
-.rightNav {
-    width: 30%;
-    font-size: 0.8rem;
+.rightNav{
+    width: 20%;
+
+}
+
+.rightNav img{
+    width: 100%;
+}
+
+.helpBox{
+    position: absolute;
+    width: 25vw;
+    transform: translateX(-45%);
 }
