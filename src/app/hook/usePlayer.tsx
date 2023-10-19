@@ -6,6 +6,7 @@ const usePlayer = () => {
 
     const dispatch = useDispatch();
 
+
     const { name, minerals } = (useSelector((state) => state) as any).currency;
 
     const setCurrentName = (newName: string) => {
