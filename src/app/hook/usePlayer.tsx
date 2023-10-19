@@ -41,7 +41,7 @@ const usePlayer = () => {
     }
 
     return ({
-        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox
+        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral
     })
 }
 
