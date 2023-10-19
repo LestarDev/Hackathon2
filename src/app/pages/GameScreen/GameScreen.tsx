@@ -1,3 +1,4 @@
+import Layout from "../Layout/Layout";
 import "./GameScreen.css";
 
 const GameScreen = () => {
