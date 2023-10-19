@@ -1,12 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+import Mineral from './mineralInterface'
+import iron from '../components/mineraly/iron'
 
 interface CounterState{
-    name: string
+    name: string,
+    minerals: Mineral[]
 }
 
 const initialState: CounterState = {
-    name: "x"
+    name: "Naukowiec",
+    minerals: [iron]
 }
 
 export const currencySlice = createSlice({
@@ -18,6 +22,8 @@ export const currencySlice = createSlice({
         setName: (state, action: PayloadAction<string>) => {
             state.name=action.payload;
         }
+
+        
     }
 })
 

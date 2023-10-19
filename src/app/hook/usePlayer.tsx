@@ -5,9 +5,9 @@ const usePlayer = () => {
 
     const dispatch = useDispatch();
 
-    const {name} = (useSelector((state) => state) as any).currency;
+    const { name } = (useSelector((state) => state) as any).currency;
 
-    const setCurrentName = (newName: string){
+    const setCurrentName = (newName: string) => {
         dispatch(setName(newName));
     }
 
