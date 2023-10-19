@@ -20,3 +20,9 @@
     width: 25vw;
     transform: translateX(-45%);
 }
+
+.rotation-left{
+    width: 80vw;
+    font-size: 70%;
+    transform: translateX(-85%);
+}
