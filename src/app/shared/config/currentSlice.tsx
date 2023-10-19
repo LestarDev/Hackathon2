@@ -25,8 +25,7 @@ export const currencySlice = createSlice({
         
         setMinerals: (state, action: PayloadAction<Mineral[]>) => {
             state.minerals=action.payload;
-        }
-
+        },
     }
 })
 
