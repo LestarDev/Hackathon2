@@ -21,7 +21,7 @@ const Start = () => {
             await sleep(900);
             while(true){
                 await audio2.play();
-                await sleep(13000);
+                await sleep(10000);
             }
         });
         
