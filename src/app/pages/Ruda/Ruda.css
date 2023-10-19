@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     /* padding: 20px; */
-    height: 19vw;
+    height: 17.6vw;
 }
 
 .imgWrapper {
@@ -16,6 +16,15 @@
 
 .rudaImg{
     /* height: 100%; */
-    width: 100%;
+    width: 50%;
 }
 
+.ruda h3{
+    margin: 1rem 0 0.5rem 0;
+}
+
+@media only screen and (min-width: 650px){
+    .ruda{
+        height: 115px;
+    }
+}

@@ -6,3 +6,9 @@
 .rightNav img{
     width: 100%;
 }
+
+.helpBox{
+    position: absolute;
+    width: 25vw;
+    transform: translateX(-45%);
+}
