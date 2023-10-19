@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import Mineral from "../shared/config/mineralInterface";
-import {setName, setMinerals, setHelpBox} from "./../shared/config/currentSlice"
+import {setName, setMinerals, setHelpBox, setOpenShop} from "./../shared/config/currentSlice"
 
 const usePlayer = () => {
 
@@ -8,7 +8,7 @@ const usePlayer = () => {
 
     
     
-    const { name, minerals, helpBox } = (useSelector((state) => state) as any).currency;
+    const { name, minerals, helpBox, isShopOpen } = (useSelector((state) => state) as any).currency;
     
     const setCurrentName = (newName: string) => {
         dispatch(setName(newName));
@@ -16,6 +16,10 @@ const usePlayer = () => {
     
     const getCurrentMineral: Mineral = (nr: number) => {
         return minerals[nr] as Mineral
+    }
+
+    const setCurrentOpenShop = (v: boolean) =>{
+        dispatch(setOpenShop(v));
     }
     
     const addMineral = (nr: number, howMuch: number) => {
@@ -49,7 +53,7 @@ const usePlayer = () => {
     }
 
     return ({
-        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral
+        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral, setCurrentOpenShop, isShopOpen
     })
 }
 

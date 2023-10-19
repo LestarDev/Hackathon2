@@ -9,11 +9,16 @@ const RightNav = () => {
     let vToReturn = '';
     let textShow = ''
 
+
     if(player.helpBox=="img"){
         vToReturn = mapa;
     }else{
         vToReturn = '';
         textShow=player.helpBox;
+    }
+
+    const changeShopDispay = () => {
+        player.setCurrentOpenShop(!player.isShopOpen)
     }
 
 
@@ -25,7 +30,8 @@ const RightNav = () => {
                 {textShow}
             </div>
             <div className="shopButton">
-                <button>SKLEP</button>
+                <button onClick={changeShopDispay}>SKLEP</button>
+                
             </div>
         </div>
 
