@@ -32,7 +32,8 @@ const usePlayer = () => {
                     opis: getCurrentMineral(i).opis,
                     img: getCurrentMineral(i).img,
                     wartosc: getCurrentMineral(i).wartosc+howMuch,
-                    rudaImg: getCurrentMineral(i).rudaImg
+                    rudaImg: getCurrentMineral(i).rudaImg,
+                    bgImg: getCurrentMineral(i).bgImg
                 }
                 cloneMinerals.push(modifitetedMaterial);
             }else{

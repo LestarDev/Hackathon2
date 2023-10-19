@@ -4,7 +4,7 @@ import './Ruda.css'
 
 const Ruda = ({mineral, onAddMaterial}: any) => {
     return (
-        <div className="ruda">
+        <div className="ruda" style={{backgroundImage: `url(${mineral.bgImg})`}}>
             <h3>{mineral.nazwa}</h3>
             <div className="imgWrapper">
                 <img className="rudaImg" src={mineral.rudaImg} alt={mineral.nazwa} onClick={onAddMaterial}/>

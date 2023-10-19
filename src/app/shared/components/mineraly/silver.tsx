@@ -1,6 +1,7 @@
 import Mineral from "../../config/mineralInterface";
 import rudaImg from "../../../../assets/rock_silver.png"
 import silverPNG from "./../../../../assets/silver.png";
+import bgImg from "../../../../assets/items/cave20000.png"
 
 const silver: Mineral = {
     nazwa: 'Srebro',
@@ -8,6 +9,7 @@ const silver: Mineral = {
     img: silverPNG,
     wartosc: 0,
     rudaImg,
+    bgImg
 }
 
 export default silver

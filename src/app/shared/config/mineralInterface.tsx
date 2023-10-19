@@ -12,6 +12,7 @@ interface Mineral {
     img: string,
     wartosc: number,
     rudaImg?: string,
+    bgImg?: string,
 }
 
 interface Item {

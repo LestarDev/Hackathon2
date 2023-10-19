@@ -1,7 +1,4 @@
 .mainFrame{
-    background-image: url("./src/assets/mainBackground.png");
-    background-repeat: no-repeat;
-    background-size:contain;
 
     /* display: flex; */
     /* flex-direction: column; */
