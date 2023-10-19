@@ -12,6 +12,7 @@ const RightNav = () => {
 
     const refHelpBox = useRef<HTMLDivElement>(null);
 
+
     if(player.helpBox=="img"){
         vToReturn = mapa;
         if(refHelpBox.current){
@@ -26,6 +27,10 @@ const RightNav = () => {
         
     }
 
+    const changeShopDispay = () => {
+        player.setCurrentOpenShop(!player.isShopOpen)
+    }
+
 
 
     return (
@@ -33,6 +38,10 @@ const RightNav = () => {
             <div className="helpBox" ref={refHelpBox}>
                 <img src={vToReturn} />
                 <span>{textShow}</span>
+            </div>
+            <div className="shopButton">
+                <button onClick={changeShopDispay}>SKLEP</button>
+                
             </div>
         </div>
 

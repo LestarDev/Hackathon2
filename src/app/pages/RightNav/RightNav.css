@@ -1,10 +1,18 @@
+.rightNav {
+    width: 30%;
+    font-size: 0.8rem;
+}
+
+.shopButton {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .rightNav{
     width: 20%;
 
-}
-
-.rightNav img{
-    width: 100%;
 }
 
 .helpBox{

@@ -12,13 +12,15 @@ import zlom from '../components/mineraly/zlom'
 interface CounterState{
     name: string,
     minerals: Mineral[],
-    helpBox: string
+    helpBox: string,
+    isShopOpen: boolean
 }
 
 const initialState: CounterState = {
     name: "Naukowiec",
     minerals: [iron, coal, copper, silver, steel, wood, zlom],
-    helpBox: "img"
+    helpBox: "img",
+    isShopOpen: false
 }
 
 export const currencySlice = createSlice({
@@ -39,9 +41,13 @@ export const currencySlice = createSlice({
             state.helpBox=action.payload;
         },
 
+        setOpenShop: (state, action: PayloadAction<boolean>) =>{
+            state.isShopOpen = action.payload;
+        }
+
     }
 })
 
-export const {setName, setMinerals, setHelpBox} = currencySlice.actions
+export const {setName, setMinerals, setHelpBox, setOpenShop} = currencySlice.actions
 
 export default currencySlice.reducer
