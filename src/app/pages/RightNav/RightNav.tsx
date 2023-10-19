@@ -19,7 +19,7 @@ const RightNav = () => {
 
     const changeShopDispay = () => {
         player.setCurrentOpenShop(!player.isShopOpen)
-    }
+    };
 
 
 
@@ -30,7 +30,7 @@ const RightNav = () => {
                 {textShow}
             </div>
             <div className="shopButton">
-                <button onClick={changeShopDispay}>SKLEP</button>
+                {!player.isShopOpen ? (<button onClick={changeShopDispay}>SKLEP</button>) : ''}
                 
             </div>
         </div>
