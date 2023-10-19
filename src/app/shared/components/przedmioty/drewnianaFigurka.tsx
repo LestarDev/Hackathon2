@@ -1,4 +1,5 @@
 import { Item } from "../../config/mineralInterface";
+import img from './../../../../assets/items/wooden_totem0000.png'
 
 const drewnianaFigurka: Item = {
     nazwa: 'Drewniana figurka',
@@ -8,7 +9,8 @@ const drewnianaFigurka: Item = {
             cena: 800
         }
     ],
-    boost: 20
+    boost: 20,
+    img,
 }
 
 export default drewnianaFigurka

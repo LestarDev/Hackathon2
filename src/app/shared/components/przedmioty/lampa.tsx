@@ -1,4 +1,5 @@
 import { Item } from "../../config/mineralInterface";
+import img from './../../../../assets/items/lamp0000.png'
 
 const lampa: Item = {
     nazwa: 'Lampa',
@@ -12,6 +13,7 @@ const lampa: Item = {
             cena: 20
         }
     ],
-    boost: 5
+    boost: 5,
+    img
 }
 export default lampa;

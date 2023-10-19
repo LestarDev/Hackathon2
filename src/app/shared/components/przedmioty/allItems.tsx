@@ -15,4 +15,4 @@ import srebrnyMlotek from "./mlotki/srebrnyMlotek";
 import stalowyKilof from "./kilofy/stalowyKilof";
 import stalowyMlotek from "./mlotki/stalowyMlotek";
 
-export default [drewnianaFigurka, drewnianyAmulet, kable, komputer, lampa, wiertlo]
+export default [drewnianaFigurka, kable, komputer, lampa, wiertlo]
