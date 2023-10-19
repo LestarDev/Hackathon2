@@ -22,7 +22,6 @@ export const currencySlice = createSlice({
         setName: (state, action: PayloadAction<string>) => {
             state.name=action.payload;
         }
-
         
     }
 })

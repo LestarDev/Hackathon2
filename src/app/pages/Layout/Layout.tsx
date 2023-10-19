@@ -1,4 +1,5 @@
 import usePlayer from "../../hook/usePlayer"
+import MineralsConteiner from "../MineralsConteiner/MineralsConteiner";
 import "./layout.css"
 
 const Layout = () => {
@@ -7,6 +8,7 @@ const Layout = () => {
     return (
         <div>
             {player.name}
+            <MineralsConteiner></MineralsConteiner>
         </div>
     )
 }
