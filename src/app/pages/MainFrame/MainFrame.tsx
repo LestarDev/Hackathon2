@@ -25,9 +25,16 @@ const MainFrame = () => {
 
     return (
         <div className="mainFrame" ref={refDiv} onLoad={addImg}>
-            {player.minerals.map((mineral: Mineral) => (
-                <Ruda mineral={mineral}></Ruda>
-            ))}
+            <div className="rudaRow">
+                <Ruda mineral={player.minerals[0]}></Ruda>
+                <Ruda mineral={player.minerals[1]}></Ruda>
+                <Ruda mineral={player.minerals[2]}></Ruda>
+            </div>
+            <div className="rudaRow">
+                <Ruda mineral={player.minerals[3]}></Ruda>
+                <Ruda mineral={player.minerals[4]}></Ruda>
+                <Ruda mineral={player.minerals[5]}></Ruda>
+            </div>
         </div>
     )
 }

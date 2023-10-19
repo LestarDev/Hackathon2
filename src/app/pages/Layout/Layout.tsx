@@ -8,8 +8,7 @@ const Layout = () => {
     const player = usePlayer();
 
     return (
-        <div>
-            {player.name}
+        <div className="mainLayout">
             <MineralsConteiner></MineralsConteiner>
             <MainFrame></MainFrame>
             <RightNav></RightNav>
