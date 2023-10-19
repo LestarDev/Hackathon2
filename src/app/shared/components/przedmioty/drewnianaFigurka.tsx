@@ -8,7 +8,7 @@ const drewnianaFigurka: Item = {
             cena: 800
         }
     ],
-    boost: 20
+    boost: 10
 }
 
 export default drewnianaFigurka

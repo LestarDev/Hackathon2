@@ -16,7 +16,7 @@ const kable: Item = {
             cena: 500
         }
     ],
-    boost: 20
+    boost: 15
 }
 
 export default kable

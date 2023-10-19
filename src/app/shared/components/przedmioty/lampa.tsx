@@ -12,6 +12,6 @@ const lampa: Item = {
             cena: 20
         }
     ],
-    boost: 5
+    boost: 2
 }
 export default lampa;
