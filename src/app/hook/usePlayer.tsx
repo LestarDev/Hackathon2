@@ -6,17 +6,18 @@ const usePlayer = () => {
 
     const dispatch = useDispatch();
 
-
+    
+    
     const { name, minerals, helpBox } = (useSelector((state) => state) as any).currency;
-
+    
     const setCurrentName = (newName: string) => {
         dispatch(setName(newName));
     };
-
+    
     const getCurrentMineral: Mineral = (nr: number) => {
         return minerals[nr] as Mineral
     }
-
+    
     const addMineral = (nr: number, howMuch: number) => {
         const cloneMinerals: Mineral[] = [];
         
@@ -26,22 +27,29 @@ const usePlayer = () => {
                     nazwa:  getCurrentMineral(i).nazwa,
                     opis: getCurrentMineral(i).opis,
                     img: getCurrentMineral(i).img,
-                    wartosc: getCurrentMineral(i).wartosc+howMuch
+                    wartosc: getCurrentMineral(i).wartosc+howMuch,
+                    rudaImg: getCurrentMineral(i).rudaImg
                 }
                 cloneMinerals.push(modifitetedMaterial);
             }else{
                 cloneMinerals.push(getCurrentMineral(i));
             }
         }
-
+        dispatch(setMinerals(cloneMinerals))
+        
     }
+    const produceSteel = () => {
+        if(minerals[0] > 0 && minerals[1] > 0){
 
+        }
+    }
+    
     const setCurrentHelpBox = (v: string) => {
         dispatch(setHelpBox(v))
     }
 
     return ({
-        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox
+        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral
     })
 }
 
