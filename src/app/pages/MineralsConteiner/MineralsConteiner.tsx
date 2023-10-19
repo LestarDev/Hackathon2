@@ -17,7 +17,13 @@ const MineralsConteiner = () => {
 
     return (
         <div className="mineralConteiner">
-            {returnAllMinerals()}        
+            <div><img src={player.getCurrentMineral(0).img} /> <span>{player.getCurrentMineral(0).nazwa+': '+player.getCurrentMineral(0).wartosc}</span></div>
+            <div><img src={player.getCurrentMineral(1).img} /><span>{player.getCurrentMineral(1).nazwa+': '+player.getCurrentMineral(1).wartosc}</span></div>
+            <div><img src={player.getCurrentMineral(2).img} /><span>{player.getCurrentMineral(2).nazwa+': '+player.getCurrentMineral(2).wartosc}</span></div>
+            <div><img src={player.getCurrentMineral(3).img} /><span>{player.getCurrentMineral(3).nazwa+': '+player.getCurrentMineral(3).wartosc}</span></div>
+            <div><img src={player.getCurrentMineral(4).img} /><span>{player.getCurrentMineral(4).nazwa+': '+player.getCurrentMineral(4).wartosc}</span></div>
+            <div><img src={player.getCurrentMineral(5).img} /><span>{player.getCurrentMineral(5).nazwa+': '+player.getCurrentMineral(5).wartosc}</span></div>
+            <div><img src={player.getCurrentMineral(6).img} /><span>{player.getCurrentMineral(6).nazwa+': '+player.getCurrentMineral(6).wartosc}</span></div>
         </div>
     )
 }

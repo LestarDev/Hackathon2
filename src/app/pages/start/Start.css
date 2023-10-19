@@ -1,0 +1,21 @@
+.startGame{
+    z-index: 600;
+    background: gray;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.startGame img{
+    width: 50vw;
+}
+
+.hideStart{
+    display: none;
+}
