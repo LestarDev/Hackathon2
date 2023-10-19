@@ -1,5 +1,7 @@
 import Mineral from "../../config/mineralInterface";
 import coalPNG from "./../../../../assets/coal.png";
+import rudaImg from "../../../../assets/rock_coal.png"
+
 
 const coal: Mineral = {
     nazwa: 'Węgiel',
@@ -7,7 +9,8 @@ const coal: Mineral = {
     img: '',
     wartosc: 0,
     img: coalPNG,
-    wartosc: 0
+    wartosc: 0,
+    rudaImg
 }
 
 export default coal

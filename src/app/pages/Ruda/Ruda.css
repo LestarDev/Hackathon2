@@ -1,4 +1,13 @@
 .ruda {
-    border: 1px solid white;
     width: 33.3333%
 }
+
+.imgWrapper {
+    height: 60%;
+    width: 100%;
+}
+
+.rudaImg{
+    height: 100%;
+}
+
