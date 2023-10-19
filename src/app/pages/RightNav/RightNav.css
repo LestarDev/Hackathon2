@@ -21,6 +21,10 @@
     transform: translateX(-45%);
 }
 
+.helpBox img{
+    width: 100%;
+}
+
 .rotation-left{
     width: 80vw;
     font-size: 70%;
