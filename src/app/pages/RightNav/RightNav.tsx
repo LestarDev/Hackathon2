@@ -24,6 +24,9 @@ const RightNav = () => {
                 <img src={vToReturn} />
                 {textShow}
             </div>
+            <div className="shopButton">
+                <button>SKLEP</button>
+            </div>
         </div>
 
     )
