@@ -1,4 +1,5 @@
 import { Item } from "../../config/mineralInterface";
+import img from './../../../../assets/items/computer0000.png'
 
 const komputer: Item = {
     nazwa: 'Komputer',
@@ -16,7 +17,8 @@ const komputer: Item = {
             cena: 1500
         }
     ],
-    boost: 20
+    boost: 20,
+    img
 }
 
 export default komputer

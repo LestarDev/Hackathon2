@@ -1,4 +1,5 @@
 import { Item } from "../../config/mineralInterface";
+import img from './../../../../assets/items/drill0000.png'
 
 const wiertlo: Item = {
     nazwa: 'Wiertło',
@@ -17,6 +18,7 @@ const wiertlo: Item = {
         }
     ],
     boost: 100,
+    img
 }
 
 export default wiertlo;

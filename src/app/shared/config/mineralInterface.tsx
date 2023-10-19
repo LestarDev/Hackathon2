@@ -17,7 +17,8 @@ interface Mineral {
 interface Item {
     nazwa: itemName,
     potrzebneSurowce: PotrzebnySurowiec[],
-    boost: number
+    boost: number,
+    img?: string,
 }
 
 export default Mineral;
