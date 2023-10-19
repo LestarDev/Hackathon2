@@ -1,0 +1,4 @@
+.mineralConteiner{
+    display: flex;
+    flex-direction: column;
+}
