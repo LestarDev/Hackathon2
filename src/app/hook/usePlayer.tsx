@@ -40,7 +40,9 @@ const usePlayer = () => {
     }
     const produceSteel = () => {
         if(minerals[0] > 0 && minerals[1] > 0){
-
+            addMineral(0, -1);
+            addMineral(1, -1);
+            addMineral(4, 1);
         }
     }
     
@@ -49,7 +51,7 @@ const usePlayer = () => {
     }
 
     return ({
-        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral
+        name, minerals, helpBox, setCurrentName, getCurrentMineral,setCurrentHelpBox, addMineral, produceSteel
     })
 }
 
