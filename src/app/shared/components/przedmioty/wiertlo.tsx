@@ -6,15 +6,15 @@ const wiertlo: Item = {
     potrzebneSurowce: [
         {
             typMineralu: 'Żelazo',
-            cena: 5000
+            cena: 10
         },
         {
             typMineralu: 'Srebro',
-            cena: 1500,
+            cena: 10,
         },
         {
             typMineralu: 'Stal',
-            cena: 400
+            cena: 10
         }
     ],
     boost: 50,

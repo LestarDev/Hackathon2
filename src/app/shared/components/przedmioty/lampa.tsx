@@ -6,7 +6,7 @@ const lampa: Item = {
     potrzebneSurowce: [
         {
             typMineralu: 'Miedź',
-            cena: 40,
+            cena: 30,
         },
         {
             typMineralu: 'Węgiel',

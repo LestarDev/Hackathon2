@@ -6,15 +6,15 @@ const komputer: Item = {
     potrzebneSurowce: [
         {
             typMineralu: 'Złom',
-            cena: 80,
+            cena: 10,
         },
         {
             typMineralu: 'Srebro',
-            cena: 600
+            cena: 20
         },
         {
             typMineralu: 'Miedź',
-            cena: 1500
+            cena: 20
         }
     ],
     boost: 20,

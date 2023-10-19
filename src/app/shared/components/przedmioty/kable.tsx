@@ -6,15 +6,15 @@ const kable: Item = {
     potrzebneSurowce: [
         {
             typMineralu: 'Miedź',
-            cena: 1500
+            cena: 20
         },
         {
             typMineralu: 'Węgiel',
-            cena: 200
+            cena: 10
         },
         {
             typMineralu: 'Żelazo',
-            cena: 500
+            cena: 10
         }
     ],
     boost: 20,

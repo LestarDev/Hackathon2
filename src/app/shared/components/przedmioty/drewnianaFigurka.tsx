@@ -6,7 +6,7 @@ const drewnianaFigurka: Item = {
     potrzebneSurowce: [
         {
             typMineralu: 'Drewno',
-            cena: 800
+            cena: 25
         }
     ],
     boost: 20,
